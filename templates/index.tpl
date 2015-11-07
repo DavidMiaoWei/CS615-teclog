@@ -40,7 +40,7 @@
             
         <div id="CalculatorPad">
             <form name="calc">
-                <CENTER><table border="2" bordercolordark="#000000" bordercolordark="#000000" cellspacing="1" cellpadding="0">
+                <table border="2" bordercolordark="#000000" bordercolordark="#000000" cellspacing="1" cellpadding="0" align="right">
                     <tr>
                         <td width="250" colspan="5"><input name="result" type="text" size="20" value="0" onfocus="blur()" >
                         </td>
@@ -78,7 +78,6 @@
                     </tr>
                     
                 </table>
-                </CENTER>
             </form>
         
 
