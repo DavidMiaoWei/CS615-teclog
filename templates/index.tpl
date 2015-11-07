@@ -1,6 +1,6 @@
 {include file="header.tpl" title="miNotes"}
 
-<body onload = "checkCookies()" > 
+
 <script>
 function checkCookies() //this function is used to check whether the cookies is used
 {
@@ -52,5 +52,5 @@ function checkCookies() //this function is used to check whether the cookies is 
         </div>
     </div>
 </div>
-</body>
+
 {include file="footer.tpl"}
