@@ -17,7 +17,7 @@
     
     <div id="notepad">
         <div id="notepad-header" class="header">
-            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span>Calculator</span>&nbsp;|&nbsp;<span>Share</span>&nbsp;|&nbsp;<span>Check Cookies</span>
+            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span>Calculator</span>&nbsp;|&nbsp;<span>Check Cookies</span>
             <span class="right">Fname Lname</span>
         </div>
         <div>
@@ -33,6 +33,47 @@
                 {/if}
             {/foreach}
         </div>
+        
+        <div id="CalculatorPad">
+            <form name="calc">
+                <center><table border="2" bordercolordark="#000000" cellspacing="1" cellpadding="0">
+                    <tr>
+                        <td width="250" colspan="5"><input name="result" type="text" size="20" value="0" onfocus="blur()" >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40"><input type="button" name="Cone" value="1" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Ctwo" value="2" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Cthree" value="3" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="CE" value="CE" onclick="clearall()"></td>
+                        <td width="40"><input type="button" name="C" value="C" onclick="clearnow()"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40"><input type="button" name="Cfour" value="4" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Cfive" value="5" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Csix" value="6" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="sing" value="-/+" onclick="change()"></td>
+                        <td width="40"><input type="button" name="equla" value="=" onclick="operate(this.value)"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="40"><input type="button" name="Cseven" value="7" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Ceight" value="8" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Cnine" value="9" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Cplus" value="+" onclick="operate(this.value)"></td>
+                        <td width="40"><input type="button" name="Csubtract" value="-" onclick="operate(this.value)"></td>
+                    </tr>
+                    <tr>
+                        <td width="40"><input type="button" name="Czero" value="0" onclick="input(this.value)"></td>
+                        <td width="40"><input type="button" name="Cpoint" value="." onclick="point()"></td>
+                        <td width="40"><input type="button" name="Cmul" value="*" onclick="operate(this.value)"></td>
+                        <td width="40"><input type="button" name="Cdivid" value="/" onclick="operate(this.value)"></td>
+                        <td width="40"></td>
+                    </tr>
+                    
+                </table>
     </div>
 </div>
 
