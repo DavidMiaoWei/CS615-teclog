@@ -4,7 +4,7 @@
     
     <div id="notes-list">
         <div id="notes-list-header" class="header">
-            <span class="left">DavidMiNotes</span>
+            <span class="left">MiNotes</span>
             <span class="right"><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></span>
         </div>
         {foreach from=$notes item=note}
@@ -18,7 +18,7 @@
     <div id="notepad">  <!--creating a div where can set the new feature-->
         <div id="notepad-header" class="header">
             <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span onclick="checkCookie()">Check Cookies</span><!--set the check cookie function's label-->
-            <span class="right">Fname Lname</span>
+            <span class="right">MIAO WEI</span>
         </div>
         <script language="JavaScript">
             function checkCookie() //this function is used to check whether the cookies is used
