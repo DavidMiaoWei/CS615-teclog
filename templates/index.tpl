@@ -17,10 +17,10 @@
     
     <div id="notepad">
         <div id="notepad-header" class="header">
-            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<p id="checkC">Check Cookies</p>
+            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span id="checkC">Check Cookies</span>
             <span class="right">Fname Lname</span>
-            
-            <script language="JavaScript">
+        </div>
+        <script language="JavaScript">
             document.getElementById("checkC").onclick=function(){checkCookie()};
             function checkCookie() //this function is used to check whether the cookies is used
             {
@@ -34,8 +34,6 @@
 	           }
             }
             </script>
-        </div>
-        
         
         <div>
             {foreach from=$notes item=note}
