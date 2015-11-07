@@ -35,73 +35,12 @@
         </div>
         
         
-        <script language="JavaScript">
-            var answer = 0
-            var lastvalue = 0
-            var ope ="+"
-            var lastope="+"
-            var newnumber = true
-            
-            function input(number){
-                if (ope == "=")
-                    clearall()
-                if ((!newnumber)&&(document.calc.result.value!="0"))
-                    document.calc.result.value += eval(digit)
-                else
-                    document.calc.result.value =""+eval(digit)
-                newnumber=false
-            }
-            
-            function clearall()
-            {
-                answer = 0
-                ope = "+"
-                clearnow()
-            }
-            
-            function clearnow()
-            {
-                documnet.calc.result.value = "0"
-                newnumber = true
-            }
-            
-            function operate(operation){
-                if ((newnumber!=true)||(ope == "="))
-                {
-                    answer = ""+answer
-                    if ((operation!="=") && (ope!= "="))
-                    {
-                        lastvalue = document.calc.result.value
-                        lastope = ope
-                        answer = eval(answer+lastope+lastvalue)
-                        document.calc.result.value = answer
-                    }
-                    else if (operation=="=")
-                    {
-                        if (ope!="=")
-                        {
-                            lastope = op
-                            lastvalue = document.calc.result.value
-                        }
-                        answer = eval(answer+lastop+lastvalue)
-                        document.calc.result.value = answer
-                    }
-                    newnumber = true
-                }
-                ope = operation
-            }
-            
-            function change()
-            {
-                answer = -1*document.calc.result.value
-                document.calc.result.value=answer
-            }
-            </script>
+
             
             
         <div id="CalculatorPad">
             <form name="calc">
-                <CENTER><table border="2" bordercolordark="#000000" cellspacing="1" cellpadding="0">
+                <CENTER><table border="2" bordercolordark="#000000" bordercolordark="#000000" cellspacing="1" cellpadding="0">
                     <tr>
                         <td width="250" colspan="5"><input name="result" type="text" size="20" value="0" onfocus="blur()" >
                         </td>
@@ -141,8 +80,74 @@
                 </table>
                 </CENTER>
             </form>
+        
+
+        <script language="JavaScript">
+
+            var answer = 0
+            var lastvalue = 0
+            var ope ="+"
+            var lastope="+"
+            var newnumber = true
             
-         </div>   
+            function input(number){
+                if (ope == "=")
+                    clearall()
+                if ((!newnumber)&&(document.calc.result.value!="0"))
+                    document.calc.result.value += eval(number)
+                else
+                    document.calc.result.value =""+eval(number)
+                newnumber=false
+            }
+            
+            function clearall()
+            {
+                answer = 0
+                ope = "+"
+                lastope = "+"
+                clearnow()
+            }
+            
+            function clearnow()
+            {
+                documnet.calc.result.value = "0"
+                newnumber = true
+            }
+            
+            function operate(operation){
+                if ((newnumber!=true)||(ope == "="))
+                {
+                    answer = ""+answer
+                    if ((operation!="=") && (ope!= "="))
+                    {
+                        lastvalue = document.calc.result.value
+                        lastope = ope
+                        answer = eval(answer+lastope+lastvalue)
+                        document.calc.result.value = answer
+                    }
+                    else if (operation=="=")
+                    {
+                        if (ope!="=")
+                        {
+                            lastope = ope
+                            lastvalue = document.calc.result.value
+                        }
+                        answer = eval(answer+lastop+lastvalue)
+                        document.calc.result.value = answer
+                    }
+                    newnumber = true
+                }
+                ope = operation
+            }
+            
+            function change()
+            {
+                answer = -1*document.calc.result.value
+                document.calc.result.value=answer
+            }
+            
+        </script>   
+        </div>     
     </div>
 </div>
 
