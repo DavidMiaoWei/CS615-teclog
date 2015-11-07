@@ -4,11 +4,11 @@
     
     <div id="notes-list">
         <div id="notes-list-header" class="header">
-            <span class="left">miNotes</span>
-            <span class="right"><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></span>
-            <p>Calculator</p>
-            <p>Check Cookies</p>
-            <p>Share</p>
+            <span class="left">miNotes</br></span>
+            <span class="right"><br><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></br></span>
+            <span class="left"><br>Calculator</br></span>
+            <span class="left"><br>Check Cookies</br></span>
+            <span class="left"><br>Share</br></span>
         </div>
         {foreach from=$notes item=note}
             <div class="notes-list-item">
