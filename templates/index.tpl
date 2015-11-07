@@ -5,9 +5,9 @@
     <div id="notes-list">
         <div id="notes-list-header" class="header">
             <span class="left">miNotes</span>
-            <span class="left">Calculator</span>
-            <span class="left">Check Cookies</span>
-            <span class="left">Share</span>
+            <p>Calculator</p>
+            <p>Check Cookies</p>
+            <p>Share</p>
             <span class="right"><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></span>
         </div>
         {foreach from=$notes item=note}
