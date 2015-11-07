@@ -6,9 +6,6 @@
         <div id="notes-list-header" class="header">
             <span class="left">miNotes</br></span>
             <span class="right"><br><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></br></span>
-            <span class="left"><br>Calculator</br></span>
-            <span class="left"><br>Check Cookies</br></span>
-            <span class="left"><br>Share</br></span>
         </div>
         {foreach from=$notes item=note}
             <div class="notes-list-item">
@@ -20,7 +17,7 @@
     
     <div id="notepad">
         <div id="notepad-header" class="header">
-            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>
+            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span>Calculator</span>&nbsp;|&nbsp;<span>share</span>&nbsp;|&nbsp;<span>check cookies</span>
             <span class="right">Fname Lname</span>
         </div>
         <div>
