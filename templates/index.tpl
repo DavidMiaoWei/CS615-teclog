@@ -1,11 +1,10 @@
 {include file="header.tpl" title="miNotes"}
 
-<body onload="checkCookies()"> 
- //automactilly check cookies 
+<body onload = "checkCookies()" > 
 <script>
 function checkCookies() //this function is used to check whether the cookies is used
 {
-	if (navigator.cookieEnabled==true)
+	if (navigator.cookieEnabled == true)
 	{
 		alter("the cookie is enabled")
 	}
