@@ -76,12 +76,14 @@
                 </table>
                 </CENTER>
             </form>
-            <script>
+            
+            <script language="JavaScript">
             var answer = 0
             var lastvalue = 0
             var ope ="+"
             var lastope="+"
             var newnumber = true
+            
             function input(number)
             {
                 if(ope == "=" )
