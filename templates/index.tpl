@@ -4,7 +4,7 @@
     
     <div id="notes-list">
         <div id="notes-list-header" class="header">
-            <span class="left">miNotes</span>
+            <span class="left">DavidMiNotes</span>
             <span class="right"><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></span>
         </div>
         {foreach from=$notes item=note}
@@ -15,9 +15,9 @@
         {/foreach}
     </div>
     
-    <div id="notepad">
+    <div id="notepad">  <!--creating a div where can set the new feature-->
         <div id="notepad-header" class="header">
-            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span onclick="checkCookie()">Check Cookies</span>
+            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>&nbsp;|&nbsp;<span onclick="checkCookie()">Check Cookies</span><!--set the check cookie function's label-->
             <span class="right">Fname Lname</span>
         </div>
         <script language="JavaScript">
@@ -34,7 +34,7 @@
             }
             </script>
         
-        <div>
+        <div><!--check this id whether log in and get data from the cloud-->
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
@@ -52,7 +52,7 @@
 
             
             
-        <div id="CalculatorPad">
+        <div id="CalculatorPad"><!--make a table for the calculator-->
             <form name="calc">
                 <table border="2" bordercolordark="#000000" bordercolordark="#000000" cellspacing="1" cellpadding="0" align="right">
                     <tr>
@@ -60,7 +60,7 @@
                         </td>
                     </tr>
                     
-                    <tr>
+                    <tr><!--per raw will be set four buttons and set the event which will be wrote by javascript-->
                         <td width="40"><input type="button" align="center" name="Cone" value="1" onclick="input(this.value)"></td>
                         <td width="40"><input type="button" align="center" name="Ctwo" value="2" onclick="input(this.value)"></td>
                         <td width="40"><input type="button" align="center" name="Cthree" value="3" onclick="input(this.value)"></td>
@@ -96,12 +96,12 @@
         
 
         <script language="JavaScript">
-
-            var answer = 0
-            var lastvalue = 0
-            var ope ="+"
-            var lastope="+"
-            var newnumber = true
+		//set inital values
+            var answer = 0 //final result
+            var lastvalue = 0 //the last value which get from the operation
+            var ope ="+" //operation
+            var lastope="+" // the last operation
+            var newnumber = true //the new number which is different with last one
             
             function input(number){
                 if (ope == "=")
@@ -111,9 +111,9 @@
                 else
                     document.calc.result.value =""+eval(number)
                 newnumber=false
-            }
+            }//input function that per button will give value to the variable
             
-            function clearall()
+            function clearall() //for the CE button
             {
                 answer = 0
                 ope = "+"
@@ -121,14 +121,15 @@
                 clearnow()
             }
             
-            function clearnow()
+            function clearnow() //for the C button
             {
-                documnet.calc.result.value = "0"
+                documnet.calc.result.value = 0
                 newnumber = true
             }
             
-            function operate(operation){
-                if ((newnumber!=true)||(ope == "="))
+            function operate(operation) //the main function of compute
+            { 
+                if ((newnumber!=true)||(ope == "=")) 
                 {
                     answer = ""+answer
                     if ((operation!="=") && (ope!= "="))
@@ -153,7 +154,7 @@
                 ope = operation
             }
             
-            function change()
+            function change() //change the value from positive to negative
             {
                 answer = -1*document.calc.result.value
                 document.calc.result.value=answer
