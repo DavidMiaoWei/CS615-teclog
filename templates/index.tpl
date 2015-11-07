@@ -34,6 +34,71 @@
             {/foreach}
         </div>
         
+        
+        <script language="JavaScript">
+            var answer = 0
+            var lastvalue = 0
+            var ope ="+"
+            var lastope="+"
+            var newnumber = true
+            
+            function input(number){
+                if (op=="=")
+                    clearall()
+                if ((!newnumber)&&(document.calc.result.value!="0"))
+                    document.calc.result.value+=eval(digit)
+                else
+                    document.calc.result.value=""+eval(digit)
+                newnumber=false
+            }
+            
+            function clearall()
+            {
+                answer = 0
+                ope = "+"
+                clearnow()
+            }
+            
+            function clearnow()
+            {
+                documnet.calc.result.value = "0"
+                newnumber = true
+            }
+            
+            function operate(operation){
+                if ((newnumber!=true)||(op=="  =   "))
+                {
+                    answer=""+answer
+                    if ((operation!="  =   ") && (op!="  =   "))
+                    {
+                        lastvalue=document.calc.result.value
+                        lastop=ope
+                        answer=eval(answer+lastop+lastvalue)
+                        document.calc.result.value=answer
+                    }
+                    else if (operation=="=")
+                    {
+                        if (ope!="=")
+                        {
+                            lastop=op
+                            lastvalue=document.calc.result.value
+                        }
+                        answer=eval(answer+lastop+lastvalue)
+                        document.calc.result.value=answer
+                    }
+                    newnumber=true
+                }
+                op=operation
+            }
+            
+            function change()
+            {
+                answer=-1*document.calc.result.value
+                document.calc.result.value=answer
+            }
+            </script>
+            
+            
         <div id="CalculatorPad">
             <form name="calc">
                 <CENTER><table border="2" bordercolordark="#000000" cellspacing="1" cellpadding="0">
@@ -77,58 +142,7 @@
                 </CENTER>
             </form>
             
-            <script language="JavaScript">
-            var answer = 0
-            var lastvalue = 0
-            var ope ="+"
-            var lastope="+"
-            var newnumber = true
             
-            function input(number)
-            {
-                if(ope == "=" )
-                    clearall()
-                if((!newnumber)&&(document.calc.result.value!="0"))
-                    document.calc.result.value += eval(number)
-                else
-                    document.calc.result.value = 0+eval(number)
-                newnumber = false
-            }
-            
-            function clearall()
-            {
-                answer = 0
-                ope = "+"
-                clearnow()
-            }
-            
-            function clearnow()
-            {
-                documnet.calc.result.value = "0"
-                newnumber = true
-            }
-            
-            function operate(operation)
-            {
-                if(newnumber!=true)||(ope =="=")
-                {
-                    answer+=answer
-                    if((operation!="=")&&(ope!="="))
-                    {
-                        answer = eval(answer+lastope+lastvalue)
-                        document.calc.result.value= answer
-                    }
-                    newnumber = true
-                    }
-                    ope=operation
-            }
-            
-            function change()
-            {
-                answer=-1*document.calc.result.value
-                document.calc.result.value=answer
-            }
-            </script>
     </div>
 </div>
 
