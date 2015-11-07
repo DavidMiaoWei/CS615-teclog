@@ -1,21 +1,5 @@
 {include file="header.tpl" title="miNotes"}
 
-
-<script>
-function checkCookies() //this function is used to check whether the cookies is used
-{
-	if (navigator.cookieEnabled == true)
-	{
-		alter("the cookie is enabled")
-	}
-	else
-	{
-		alter("the cookies is disabled")
-	}
-}
-</script>
-
-
 <div id="container">
     
     <div id="notes-list">
