@@ -1,5 +1,22 @@
 {include file="header.tpl" title="miNotes"}
 
+<body onload="checkCookies()"> 
+ //automactilly check cookies 
+<script>
+function checkCookies() //this function is used to check whether the cookies is used
+{
+	if (navigator.cookieEnabled==true)
+	{
+		alter("the cookie is enabled")
+	}
+	else
+	{
+		alter("the cookies is disabled")
+	}
+}
+</script>
+
+
 <div id="container">
     
     <div id="notes-list">
@@ -29,13 +46,12 @@
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
-                    <h1 id = "id1">this is the place where i change it</h1>
-					<button type="button" onclick="document.getElementById('id1').style.color='red'"> Please press at here</button>
+                    
                 </form>
                 {/if}
             {/foreach}
         </div>
     </div>
 </div>
-
+</body>
 {include file="footer.tpl"}
