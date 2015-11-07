@@ -29,6 +29,8 @@
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
+                    <h1 id = "id1">this is the place where i change it</h1>
+					<button type="button" onclick="document.getElementById('id1').style.color='red'"> Please press at here</button>
                 </form>
                 {/if}
             {/foreach}
