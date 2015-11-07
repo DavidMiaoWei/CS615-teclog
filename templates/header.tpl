@@ -9,7 +9,7 @@ function checkCookies() //this function is used to check whether the cookies is 
 {
 	if (navigator.cookieEnabled == true)
 	{
-		alert("the cookie is enabled")
+		alert("the cookie is enabled") //show the message 
 	}
 	else
 	{
@@ -17,10 +17,7 @@ function checkCookies() //this function is used to check whether the cookies is 
 	}
 }
 
-function myFunction()
-{
-    alert("Do you really want leave");
-}
+
 </script>
 
-<button onclick="myFunction()">CLOSE</button>
+
