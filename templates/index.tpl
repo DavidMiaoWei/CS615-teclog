@@ -132,7 +132,7 @@
                             lastope = ope
                             lastvalue = document.calc.result.value
                         }
-                        answer = eval(answer+lastop+lastvalue)
+                        answer = eval(answer+lastope+lastvalue)
                         document.calc.result.value = answer
                     }
                     newnumber = true
