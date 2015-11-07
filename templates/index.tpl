@@ -36,7 +36,7 @@
         
         <div id="CalculatorPad">
             <form name="calc">
-                <center><table border="2" bordercolordark="#000000" cellspacing="1" cellpadding="0">
+                <CENTER><table border="2" bordercolordark="#000000" cellspacing="1" cellpadding="0">
                     <tr>
                         <td width="250" colspan="5"><input name="result" type="text" size="20" value="0" onfocus="blur()" >
                         </td>
@@ -74,7 +74,7 @@
                     </tr>
                     
                 </table>
-                </center>
+                </CENTER>
             </form>
             <script>
             var answer = 0
@@ -86,7 +86,7 @@
             {
                 if(ope == "=" )
                     clearall()
-                if（(!newnumber)&&(document.calc.result.value!="0")）
+                if((!newnumber)&&(document.calc.result.value!="0"))
                     document.calc.result.value += eval(number)
                 else
                     document.calc.result.value = 0+eval(number)
