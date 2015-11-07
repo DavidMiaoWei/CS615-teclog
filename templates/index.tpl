@@ -43,12 +43,12 @@
             var newnumber = true
             
             function input(number){
-                if (op=="=")
+                if (ope == "=")
                     clearall()
                 if ((!newnumber)&&(document.calc.result.value!="0"))
-                    document.calc.result.value+=eval(digit)
+                    document.calc.result.value += eval(digit)
                 else
-                    document.calc.result.value=""+eval(digit)
+                    document.calc.result.value =""+eval(digit)
                 newnumber=false
             }
             
@@ -66,34 +66,34 @@
             }
             
             function operate(operation){
-                if ((newnumber!=true)||(op=="  =   "))
+                if ((newnumber!=true)||(ope == "="))
                 {
-                    answer=""+answer
-                    if ((operation!="  =   ") && (op!="  =   "))
+                    answer = ""+answer
+                    if ((operation!="=") && (ope!= "="))
                     {
-                        lastvalue=document.calc.result.value
-                        lastop=ope
-                        answer=eval(answer+lastop+lastvalue)
-                        document.calc.result.value=answer
+                        lastvalue = document.calc.result.value
+                        lastope = ope
+                        answer = eval(answer+lastope+lastvalue)
+                        document.calc.result.value = answer
                     }
                     else if (operation=="=")
                     {
                         if (ope!="=")
                         {
-                            lastop=op
-                            lastvalue=document.calc.result.value
+                            lastope = op
+                            lastvalue = document.calc.result.value
                         }
-                        answer=eval(answer+lastop+lastvalue)
-                        document.calc.result.value=answer
+                        answer = eval(answer+lastop+lastvalue)
+                        document.calc.result.value = answer
                     }
-                    newnumber=true
+                    newnumber = true
                 }
-                op=operation
+                ope = operation
             }
             
             function change()
             {
-                answer=-1*document.calc.result.value
+                answer = -1*document.calc.result.value
                 document.calc.result.value=answer
             }
             </script>
@@ -132,7 +132,7 @@
                     </tr>
                     <tr>
                         <td width="40"><input type="button" align="center" name="Czero" value="0" onclick="input(this.value)"></td>
-                        <td width="40"><input type="button" align="center" name="Cpoint" value="." onclick="point()"></td>
+                        <td width="40"><input type="button" align="center" name="Cpoint" value="."></td>
                         <td width="40"><input type="button" align="center" name="Cmul" value="*" onclick="operate(this.value)"></td>
                         <td width="40"><input type="button" align="center" name="Cdivid" value="/" onclick="operate(this.value)"></td>
                         <td width="40"></td>
