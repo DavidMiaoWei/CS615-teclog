@@ -74,6 +74,57 @@
                     </tr>
                     
                 </table>
+                </center>
+            </form>
+            <script>
+            var answer = 0
+            var lastvalue = 0
+            var ope ="+"
+            var lastope="+"
+            var newnumber = true
+            function input(number)
+            {
+                if(ope == "=" )
+                    clearall()
+                if(!newnumber)&&(document.calc.result.value!="0")
+                    document.calc.result.value += eval(number)
+                newnumber = false
+            }
+            
+            function clearall()
+            {
+                answer = 0
+                ope = "+"
+                clearnow()
+            }
+            
+            function clearnow()
+            {
+                documnet.calc.result.value = "0"
+                newnumber = true
+            }
+            
+            function operate(operation)
+            {
+                if(newnumber!=true)||(ope =="=")
+                {
+                    answer+=answer
+                    if((operation!="=")&&(ope!="="))
+                    {
+                        answer = eval(answer+lastope+lastvalue)
+                        document.calc.result.value= answer
+                    }
+                    newnumber = true
+                    }
+                    ope=operation
+            }
+            
+            function change()
+            {
+                answer=-1*document.calc.result.value
+                document.calc.result.value=answer
+            }
+            </script>
     </div>
 </div>
 
