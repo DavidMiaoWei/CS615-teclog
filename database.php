@@ -3,10 +3,10 @@
 class Db {
     
     protected $con;
-    private $host = "us-cdbr-azure-west-c.cloudapp.net";
-    private $user = "bc42bd8bfbe554";
-    private $pwd = "7c29d603";
-    private $db = "acsm_33acec1ef387ebd";
+    private $host = "eu-cdbr-azure-north-d.cloudapp.net";
+    private $user = "b29b879708aebf";
+    private $pwd = "c8ec795c";
+    private $db = "acsm_56e3d86a5b9b21a";
     
     //Creates a PDO conection & sets error mode to exceptions
     public function __construct(){
